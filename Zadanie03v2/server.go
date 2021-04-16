@@ -15,11 +15,11 @@ func main() {
 	e.GET("/", func(c echo.Context) error {
 		return c.String(http.StatusOK, "Hello, World!")
 	})
-	e.GET("/users", controllers.GetStudents)
-	e.POST("/users", controllers.CreateStudent)
-	e.GET("/users/:id", controllers.GetStudent)
-	e.PUT("/users/:id", controllers.UpdateStudent)
-	e.DELETE("/users/:id", controllers.DeleteStudent)
+	e.GET("/students", controllers.GetStudents)
+	e.POST("/students", controllers.CreateStudent)
+	e.GET("/students/:id", controllers.GetStudent)
+	e.PUT("/students/:id", controllers.UpdateStudent)
+	e.DELETE("/students/:id", controllers.DeleteStudent)
 
 	e.Logger.Fatal(e.Start(":1323"))
 	db.Close()
